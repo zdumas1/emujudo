@@ -22,7 +22,7 @@ header img.logo {
   top: 50%;
   left: 20px;
   transform: translateY(-50%);
-  height: 110px; /* adjust this value as needed */
+  height: 110px;
   width: auto;
 }
 
@@ -127,6 +127,7 @@ nav li a:focus {
   height: auto;
   object-fit: contain; /* fit inside without cropping */
   border-radius: 10px;
+  display: block;
 }
 .btn {
   display: inline-block;
@@ -325,4 +326,23 @@ main {
   font-size: 1rem;
   line-height: 1.6;
   color: #333;
+}
+@media (max-width: 600px) {
+  header {
+    padding-left: 20px; /* add some padding for logo space */
+  }
+
+  header img.logo {
+    position: static; /* remove absolute */
+    display: block;
+    margin: 0 auto 10px; /* center and add spacing below */
+    height: 70px; /* smaller height */
+    transform: none; /* reset transform */
+  }
+
+  nav ul {
+    flex-direction: column; /* stack nav vertically */
+    gap: 1rem;
+    padding-left: 0;
+  }
 }
