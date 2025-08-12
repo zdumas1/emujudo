@@ -341,8 +341,10 @@ main {
   }
 
   nav ul {
-    flex-direction: column; /* stack nav vertically */
+    display: flex;
+    overflow-x: auto;
     gap: 1rem;
-    padding-left: 0;
+    padding-left: 10px;
+    -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
   }
 }
