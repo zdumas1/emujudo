@@ -1,0 +1,328 @@
+:root {
+  --background: #d9d9d9;
+  --dark-green: #046a38;
+  --accents: #ff8400;
+  --white: #ffffff;
+}
+header {
+  position: relative;
+  background-color: var(--dark-green);
+  color: var(--white);
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo on top-left corner */
+header img.logo {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  height: 110px; /* adjust this value as needed */
+  width: auto;
+}
+
+/* Center title and nav vertically */
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-center h1 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+}
+.container {
+  background-color: var(--background); /* light green */
+  overflow: hidden;
+  min-height: calc(100vh - 40px); /* adjusts for the body padding */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: white;
+  padding: 20px; /* this creates the white "margin" look */
+  box-sizing: border-box;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.5rem;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+nav li a:hover,
+nav li a:focus {
+  border-bottom: 2px solid var(--accents);
+  color: var(--accents);
+  outline: none;
+}
+.home {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  margin: 40px 0 20px;
+  background-color: var(--dark-green);
+  color: var(--white);
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 90%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.home h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.home p {
+  font-size: 1rem;
+
+  margin-bottom: 2rem;
+}
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  margin: 0 auto 2rem; /* auto centers it horizontally */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: contain; /* fit inside without cropping */
+  border-radius: 10px;
+}
+.btn {
+  display: inline-block;
+  background-color: var(--accents);
+  color: var(--white);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e67300; /* slightly darker accent */
+}
+footer {
+  margin-top: 20px;
+  padding: 15px 20px;
+  background-color: var(--dark-green);
+  border-top: 2px solid var(--accents);
+  color: var(--white);
+  text-align: center;
+  border-radius: 0;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  background-color: var(--background);
+  height: 100%;
+}
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.about-section {
+  margin: 40px auto 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 800px;
+  background-color: var(--dark-green);
+  color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--white);
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+.team-container {
+  width: 100vw; /* Full viewport width */
+  max-width: 100%; /* Prevent overflow horizontally */
+  overflow: hidden; /* Hide anything outside the container */
+  margin: 40px 0; /* Space above and below */
+}
+.team-container img {
+  width: 100%; /* Make image fill the container width */
+  height: 533px; /* Fixed height for banner look */
+  object-fit: cover; /* Crop to fill without distortion */
+  display: block; /* Remove inline gap */
+  border-radius: 0; /* No rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Optional subtle shadow */
+}
+.team-section {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 800px;
+  background-color: var(--dark-green);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.team-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.team-member {
+  flex: 1 1 250px;
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.team-member h3 {
+  margin: 10px 0 8px;
+  color: var(--dark-green);
+}
+
+.team-member p {
+  font-size: 1rem;
+  margin: 0;
+  color: var(--dark-green);
+}
+.history-section {
+  background-color: var(--dark-green);
+  color: var(--white);
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.history-section h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.history-photo {
+  width: 80%; /* smaller width */
+  max-width: 500px; /* limit max size */
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 20px auto; /* center horizontally with bottom margin */
+  filter: grayscale(30%); /* optional vintage vibe */
+  display: block; /* makes margin auto work horizontally */
+}
+
+.history-text {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #ddd;
+  font-style: italic;
+}
+.faq-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--dark-green); /* light green */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h2 {
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.faq-item {
+  background-color: var(--white);
+  border: 2px solid var(--dark-green);
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.faq-question {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: var(--dark-green);
+}
+
+.faq-answer {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}

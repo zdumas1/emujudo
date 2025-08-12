@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EMU Judo | Official Website</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("slide");
+
+        function autoShowSlides() {
+          for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+
+          slideIndex++;
+          if (slideIndex > slides.length) {
+            slideIndex = 1;
+          }
+
+          slides[slideIndex - 1].style.display = "block";
+          setTimeout(autoShowSlides, 5000); // change every 5 seconds
+        }
+
+        autoShowSlides();
+      });
+    </script>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <img src="images/logowhite.png" alt="EMU Judo Logo" class="logo" />
+          <div class="header-center">
+            <h1>EMU Judo</h1>
+            <p>Welcome to the official website of EMU Judo.</p>
+            <nav>
+              <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="about.html">About</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <section class="home">
+          <div class="slideshow-container">
+            <div class="slide fade">
+              <img src="images/judo1.jpg" alt="Judo action 1" />
+            </div>
+            <div class="slide fade">
+              <img src="images/judo2.jpg" alt="Judo action 2" />
+            </div>
+            <div class="slide fade">
+              <img src="images/judo3.jpg" alt="Judo action 3" />
+            </div>
+            <div class="slide fade">
+              <img src="images/judo4.jpg" alt="Judo action 3" />
+            </div>
+
+            <div class="slide fade">
+              <img src="images/judo6.jpg" alt="Judo action 3" />
+            </div>
+            <div class="slide fade">
+              <img src="images/judo7.jpg" alt="Judo action 3" />
+            </div>
+            <div class="slide fade">
+              <img src="images/judo8.jpg" alt="Judo action 3" />
+            </div>
+            <div class="slide fade">
+              <img src="images/judo9.jpg" alt="Judo action 3" />
+            </div>
+          </div>
+          <a href="faq.html" class="btn">Want to Join?</a>
+        </section>
+      </div>
+      <footer>
+        <p>&copy; 2025 EMU Judo. All rights reserved.</p>
+      </footer>
+    </main>
+  </body>
+</html>
