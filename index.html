@@ -10,28 +10,6 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="images/favlogo.png" />
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        let slideIndex = 0;
-        const slides = document.getElementsByClassName("slide");
-
-        function autoShowSlides() {
-          for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-
-          slideIndex++;
-          if (slideIndex > slides.length) {
-            slideIndex = 1;
-          }
-
-          slides[slideIndex - 1].style.display = "block";
-          setTimeout(autoShowSlides, 5000); // change every 5 seconds
-        }
-
-        autoShowSlides();
-      });
-    </script>
   </head>
   <body>
     <main>
@@ -40,45 +18,31 @@
           <img src="images/logowhite.png" alt="EMU Judo Logo" class="logo" />
           <div class="header-center">
             <h1>EMU Judo</h1>
-            <p>Welcome to the official website of EMU Judo.</p>
+            <p>Stay up-to-date with the latest club news and events.</p>
             <nav>
               <ul class="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="updates.html">Updates</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="about.html">About</a></li>
               </ul>
             </nav>
           </div>
         </header>
-        <section class="home">
-          <div class="slideshow-container">
-            <div class="slide fade">
-              <img src="images/judo1.jpg" alt="Judo action 1" />
-            </div>
-            <div class="slide fade">
-              <img src="images/judo2.jpg" alt="Judo action 2" />
-            </div>
-            <div class="slide fade">
-              <img src="images/judo3.jpg" alt="Judo action 3" />
-            </div>
-            <div class="slide fade">
-              <img src="images/judo4.jpg" alt="Judo action 3" />
-            </div>
+        <section class="featured-section">
+          <div class="featured-story">
+            <h2>EMU Judo Takes Over Sambo Tournament!</h2>
+            <article class="story-card">
+              <img src="images/sambo.jpg" alt="Featured Club Event" />
 
-            <div class="slide fade">
-              <img src="images/judo6.jpg" alt="Judo action 3" />
-            </div>
-            <div class="slide fade">
-              <img src="images/judo7.jpg" alt="Judo action 3" />
-            </div>
-            <div class="slide fade">
-              <img src="images/judo8.jpg" alt="Judo action 3" />
-            </div>
-            <div class="slide fade">
-              <img src="images/judo9.jpg" alt="Judo action 3" />
-            </div>
+              <p>
+                The Judo Team recently participated in the Great Lakes Sambo
+                Championship! It was an exciting weekend where the team was able
+                to showcase their skills in a different martial art...
+              </p>
+              <a href="updates.html" class="read-more">Read More</a>
+            </article>
           </div>
-          <a href="faq.html" class="btn">Want to Join?</a>
         </section>
       </div>
       <footer>

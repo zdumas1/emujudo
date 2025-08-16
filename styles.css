@@ -38,13 +38,12 @@ header img.logo {
   font-size: 2rem;
 }
 .container {
-  background-color: var(--background); /* light green */
+  background-color: var(--background);
   overflow: hidden;
-  min-height: calc(100vh - 40px); /* adjusts for the body padding */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh; /* keep at least full viewport height */
+  display: block; /* remove flex centering */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 body {
@@ -81,67 +80,71 @@ nav li a:focus {
   color: var(--accents);
   outline: none;
 }
-.home {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 40px 20px;
-  margin: 40px 0 20px;
+.featured-section {
   background-color: var(--dark-green);
   color: var(--white);
-  border-radius: 10px;
-  max-width: 1000px;
   width: 90%;
-  box-sizing: border-box;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
 }
-.home h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.home p {
-  font-size: 1rem;
-
-  margin-bottom: 2rem;
-}
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  margin: 0 auto 2rem; /* auto centers it horizontally */
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.featured-story {
+  margin: 40px auto;
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
 }
 
-.slide {
-  display: none;
-}
-
-.slide img {
-  width: 100%;
-  max-width: 600px;
-  height: auto;
-  object-fit: contain; /* fit inside without cropping */
-  border-radius: 10px;
-  display: block;
-}
-.btn {
-  display: inline-block;
-  background-color: var(--accents);
+.featured-story h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
   color: var(--white);
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background-color: #e67300; /* slightly darker accent */
+.story-card {
+  background-color: #fff;
+  color: var(--dark-green);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.story-card img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.story-card h3 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.story-card p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.read-more {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--accents);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.read-more:hover {
+  background: #e67300;
 }
 footer {
   margin-top: 20px;
@@ -346,5 +349,70 @@ main {
     gap: 1rem;
     padding-left: 10px;
     -webkit-overflow-scrolling: touch;
+  }
+}
+.updates-section {
+  display: flex;
+  flex-direction: column; /* stack cards vertically */
+  gap: 30px;
+  margin: 40px auto;
+  width: 90%;
+  max-width: 800px;
+  background-color: var(--dark-green); /* dark green like About/FAQ */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.update-card {
+  display: flex;
+  background-color: var(--white); /* card itself stays white */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.update-card img {
+  width: 300px; /* fixed width */
+  height: 200px;
+  object-fit: cover;
+}
+
+.update-content {
+  padding: 15px;
+  flex: 1;
+}
+
+.update-content h3 {
+  margin: 0 0 10px;
+  color: var(--dark-green);
+}
+
+.update-content p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.announcement-header {
+  display: flex;
+  align-items: center; /* vertically center logo with text */
+  gap: 10px; /* space between logo and heading */
+}
+
+.announcement-logo img {
+  width: 30px; /* control size */
+  height: auto;
+  opacity: 0.7; /* subtle */
+}
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .update-card {
+    flex-direction: column;
+  }
+
+  .update-card img {
+    width: 100%;
+    height: auto;
   }
 }
