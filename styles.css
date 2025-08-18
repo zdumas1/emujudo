@@ -55,6 +55,33 @@ body {
   padding: 20px; /* this creates the white "margin" look */
   box-sizing: border-box;
 }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links {
+  margin-left: 20px;
+}
+
+.instagram-icon {
+  width: 24px;
+  height: 24px;
+
+  transition: transform 0.2s ease;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.1);
+}
 nav ul {
   list-style: none;
   padding: 0;
